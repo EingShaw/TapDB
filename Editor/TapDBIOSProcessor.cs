@@ -1,13 +1,13 @@
-using TapCommon.Scripts.Editor;
+using TapCommon.Editor;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
-namespace TapDB.Scripts.Editor
+namespace TapDB.Editor
 {
     public class TapDBIOSProcessor
     {
-        [PostProcessBuildAttribute(104)]
+        [PostProcessBuild(104)]
         public static void OnPostprocessBuild(BuildTarget buildTarget, string path)
         {
             if (buildTarget != BuildTarget.iOS) return;
